@@ -37,7 +37,9 @@ struct ContentView: View {
                     .padding(1)
                     .onTapGesture {
                         emoji = "ios"
-                    } 
+                    }  .onLongPressGesture {
+                        emoji = "ques"
+                    }
                     Text("GAMEDEV")
                         .font(.title)
                     .frame(width: 200)
@@ -47,6 +49,7 @@ struct ContentView: View {
                     .padding(1)
                     .onTapGesture {
                         emoji = "gamedev"
+                        
                     }
                 Text("WEB")
                         .font(.title)
