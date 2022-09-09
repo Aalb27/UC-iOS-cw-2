@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var value = ""
+    @State var value: String = ""
    
     var body: some View {
         ZStack{
@@ -26,16 +26,16 @@ struct ContentView: View {
                 Spacer()
                 HStack{
                     Text("🇺🇸")
-                    Text("$\((Double(value) ?? 0) * 3.28)")
+                    Text(String(format: "$%.2f" , (3.28 * (Double(value) ?? 0))))
                 }
                 HStack{
                     Text("🇬🇧")
-                    Text("£\((Double(value) ?? 0) * 2.46)")
+                    Text(String(format: "£%.2f" , (2.46 * (Double(value) ?? 0))))
                 }
-                    
+              
                 HStack{
                     Text("🇪🇺")
-            Text(" €\((Double(value) ?? 0) * 2.70)")
+                    Text(String(format: "€%.2f" , (2.70 * (Double(value) ?? 0))))
                 }
                 Spacer()
         Image("currency")
