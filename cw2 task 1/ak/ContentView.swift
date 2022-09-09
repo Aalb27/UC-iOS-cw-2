@@ -40,6 +40,7 @@ struct ContentView: View {
                     }  .onLongPressGesture {
                         emoji = "ques"
                     }
+                    VStack{
                     Text("GAMEDEV")
                         .font(.title)
                     .frame(width: 200)
@@ -48,9 +49,13 @@ struct ContentView: View {
                     .cornerRadius(20)
                     .padding(1)
                     .onTapGesture {
-                        emoji = "gamedev"
+                        emoji = "gamedev"}
+                    .onLongPressGesture {
+                        emoji = "ques"
                         
                     }
+                    }
+                    VStack{
                 Text("WEB")
                         .font(.title)
                     .frame(width: 200)
@@ -58,9 +63,12 @@ struct ContentView: View {
                     .foregroundColor(Color.white)
                     .cornerRadius(20)
                     .padding(1)
-                    .onTapGesture {
-                        emoji = "web"
-                    }
+                    .onTapGesture { emoji = "web" }
+                    .onLongPressGesture {
+                        emoji = "ques"
+                    } }
+                    
+                    VStack{
                     Text("ANDROID")
                         .font(.title)
                         .frame(width: 200)
@@ -71,19 +79,22 @@ struct ContentView: View {
                         .onTapGesture {
                             emoji = "android"
                         }
+                        .onLongPressGesture {
+                            emoji = "ques"
+                        } }
                     Spacer()
                   
             
                    
                    
               
-                }
+                
                       }
                       
             .padding()
     }
 }
-
+    }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
@@ -91,3 +102,4 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 }
+
