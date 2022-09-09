@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var value: String = ""
+    @State var value = ""
    
     var body: some View {
         ZStack{
@@ -27,16 +27,17 @@ struct ContentView: View {
                 HStack{
                     Text("🇺🇸")
                     Text(String(format: "$%.2f" , (3.28 * (Double(value) ?? 0))))
-                }
+                    .fontWeight(.light)                }
                 HStack{
                     Text("🇬🇧")
                     Text(String(format: "£%.2f" , (2.46 * (Double(value) ?? 0))))
-                }
+                    .fontWeight(.light)                 }
               
                 HStack{
                     Text("🇪🇺")
+                    
                     Text(String(format: "€%.2f" , (2.70 * (Double(value) ?? 0))))
-                }
+                    .fontWeight(.light)            }
                 Spacer()
         Image("currency")
                     .resizable()
